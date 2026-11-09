@@ -23,3 +23,8 @@ chroma_db/
 # OS
 .DS_Store
 Thumbs.db
+
+# Secrets (API keys) - never commit
+.env
+.env.*
+!.env.example

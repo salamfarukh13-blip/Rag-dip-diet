@@ -58,6 +58,11 @@ def call_groq_model(granite_analysis: str, user_query: str) -> str:
     """
     Send Granite's raw analysis to Groq's openai/gpt-oss-120b for a polished reply.
     """
+    if not GROQ_API_KEY:
+        raise RuntimeError(
+            "GROQ_API_KEY is not set. Create a .env file with your Groq key "
+            "(see 'Configure environment' in the README)."
+        )
     client = OpenAI(api_key=GROQ_API_KEY, base_url=GROQ_BASE_URL)
 
     system_prompt = (

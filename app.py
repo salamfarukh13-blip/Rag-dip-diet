@@ -146,6 +146,11 @@ st.markdown(
     '<div class="subtitle">Disciplined & Intelligent Plan · Powered by IBM watsonx + Groq · RAG with ChromaDB</div>',
     unsafe_allow_html=True,
 )
+st.warning(
+    "⚕️ **Not medical advice.** This assistant shares general DIP Diet guidance for education only. "
+    "If you have a health condition (such as diabetes, hypertension or kidney disease), are pregnant, "
+    "or take medication, talk to your doctor before changing your diet."
+)
 st.markdown("---")
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────

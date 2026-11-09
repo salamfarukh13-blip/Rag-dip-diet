@@ -191,6 +191,11 @@ with tab1:
                     from agent import run_rag_agent
 
                     collection = load_collection()
+                    if collection.count() == 0:
+                        raise RuntimeError(
+                            "The DIP knowledge base is empty. Run `python ingest.py` "
+                            "once to build it, then restart the app."
+                        )
                     context    = get_context(user_input, collection)
                     answer    = run_rag_agent(
                         user_query=user_input,
